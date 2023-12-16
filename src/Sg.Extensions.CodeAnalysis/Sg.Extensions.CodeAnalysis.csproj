@@ -8,9 +8,9 @@
 		<Version>1.0.0-beta1.231216.1</Version>
 		
 		<Authors>SourceGeneration</Authors>
-		<RepositoryUrl>https://github.com/SourceGeneration</RepositoryUrl>
+		<RepositoryUrl>https://github.com/SourceGeneration/Extensions.CodeAnalysis</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageProjectUrl>https://github.com/SourceGeneration</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/SourceGeneration/Extensions.CodeAnalysis</PackageProjectUrl>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageOutputPath>./../../../nupkg</PackageOutputPath>
 
