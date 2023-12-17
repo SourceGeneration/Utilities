@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace System.Text;
+﻿namespace System.Text;
 
 public class CSharpCodeBuilder
 {
@@ -20,16 +18,13 @@ public class CSharpCodeBuilder
         _indent = indent;
     }
 
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void AppendLine() => _builder.AppendLine();
 
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void IncreaseIndent()
     {
         _indent += IndentLength;
     }
 
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void DecreaseIndent()
     {
         if (_indent >= IndentLength)
