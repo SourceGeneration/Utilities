@@ -12,6 +12,8 @@ public static class SyntaxExtensions
 
     public static bool IsPublic(this MemberDeclarationSyntax typeDeclaration) => typeDeclaration.Modifiers.Any(m => m.IsKind(SyntaxKind.PublicKeyword));
 
+    public static bool IsPublicOrInternal(this MemberDeclarationSyntax typeDeclaration) => typeDeclaration.Modifiers.Any(m => m.IsKind(SyntaxKind.PublicKeyword) || m.IsKind(SyntaxKind.InternalKeyword));
+
     public static bool IsNested(this MemberDeclarationSyntax typeDeclaration) => typeDeclaration.Parent is TypeDeclarationSyntax;
 
     public static bool IsAbstract(this MemberDeclarationSyntax typeDeclaration) => typeDeclaration.Modifiers.Any(m => m.IsKind(SyntaxKind.AbstractKeyword));
