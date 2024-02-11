@@ -50,13 +50,13 @@ public class CSharpCodeBuilder
         _builder.AppendLine(value);
     }
 
-    public void AppendBlock(string value, Action block)
+    public void AppendBlock(string value, Action block, string? end = null)
     {
         AppendLine(value);
-        AppendBlock(block);
+        AppendBlock(block, end);
     }
 
-    public void AppendBlock(Action block)
+    public void AppendBlock(Action block, string? end = null)
     {
         AppendLine("{");
         if (block != null)
@@ -65,7 +65,19 @@ public class CSharpCodeBuilder
             block.Invoke();
             _indent -= IndentLength;
         }
-        AppendLine("}");
+        AppendLine($"}}{end}");
+    }
+
+    public void AppendAssignment(string property, object? value, bool statement = false)
+    {
+        string valueStr;
+        if (value == null) valueStr = "null";
+        else if (value is bool b) valueStr = b ? "true" : "false";
+        else if (value is string s) valueStr = @$"""{s}""";
+        else valueStr = value.ToString();
+
+        char end = statement ? ';' : ',';
+        AppendLine($"{property} = {valueStr}{end}");
     }
 
     public override string ToString() => _builder.ToString();
