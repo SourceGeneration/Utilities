@@ -5,17 +5,17 @@
 		<LangVersion>12</LangVersion>
 		<Nullable>enable</Nullable>
 
-		<Version>1.0.0-beta1.240211.1</Version>
-
+		<Version>1.0.0-beta1.240211.6</Version>
 		<Authors>SourceGeneration</Authors>
-		<Description>Extension for Microsoft.CodeAnalysis.CSharp</Description>
-		<RepositoryUrl>https://github.com/SourceGeneration/Extensions.CodeAnalysis</RepositoryUrl>
+		<Description>Utilities for source generation</Description>
+		<RepositoryUrl>https://github.com/SourceGeneration/Utilities</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageProjectUrl>https://github.com/SourceGeneration/Extensions.CodeAnalysis</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/SourceGeneration/Utilities</PackageProjectUrl>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<PackageOutputPath>./../../../nupkg</PackageOutputPath>
 		<PackageIcon>sg.png</PackageIcon>
 	</PropertyGroup>
+
 	<ItemGroup>
 		<None Include=".\..\..\sg.png">
 			<Pack>True</Pack>
@@ -26,9 +26,8 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" />
 	</ItemGroup>
-
-	<ItemGroup>
+	<!--<ItemGroup>
 		<None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-	</ItemGroup>
+	</ItemGroup>-->
 
 </Project>
